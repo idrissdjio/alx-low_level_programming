@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * here we want to print a line
- * we will be using the puts
- * we should return 0 always
+ * main - Entry point
+ *
+ *Return always 0
  */
 
 int main(void)
