@@ -3,9 +3,6 @@
 /**
  * print_times_table - prints the n table
  * @n: the value of times
- * @num: the number
- * @mult: the multiplier
- * @prod: the end product number
  */
 void print_times_table(int n)
 {
