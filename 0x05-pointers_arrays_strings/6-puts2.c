@@ -3,15 +3,16 @@
 /**
  * puts2 - print charcs
  *
- * @s: value
+ * @str: value
  *
  * Return: void
  */
 
 void puts2(char *str)
 {
-	int i = 0;
+	int i;
 
+	i = 0;
 	while (*(str + i))
 	{
 		_putchar(*(str + i));
