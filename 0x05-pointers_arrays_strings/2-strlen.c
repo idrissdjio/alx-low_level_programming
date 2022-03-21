@@ -11,5 +11,7 @@
 
 int _strlen(char *s)
 {
-	return (strlen(*s));
+	char arr[] = *s;
+
+	return (strlen(arr));
 }
