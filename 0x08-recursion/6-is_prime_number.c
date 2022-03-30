@@ -16,7 +16,7 @@ int recurse(int n, int i)
 	if (n % i == 0 && n != i)
 		return (0);
 	if (i < n)
-		return (recurse(n, i+2));
+		return (recurse(n, i + 2));
 	return (1);
 }
 
