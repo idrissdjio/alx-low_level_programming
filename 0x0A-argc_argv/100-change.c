@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 			{
 				cents -= coins[i];
 				count++;
-				break++;
+				break;
 			}
 		}
 	}
