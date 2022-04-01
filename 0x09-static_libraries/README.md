@@ -1,0 +1,1 @@
+Letslearn the static variables.
