@@ -1,8 +1,10 @@
 #include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdio.h>
 
 /**
  * print_numbers - print numbers and newline
- * @separator: string between numbers
+ * @separator: string 
  * @n: number of int
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
