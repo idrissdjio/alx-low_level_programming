@@ -2,24 +2,20 @@
 
 /**
  * print_numbers - print numbers and newline
- * @separator: string 
+ * @separator: string between numbers
  * @n: number of int
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	va_list list;
+	va_list params;
 
-	separator = (separator != NULL) ? separator : "";
-
-	va_start(list, n);
+	va_start(params, n);
 	for (i = 0; i < n; i++)
 	{
-		if (i > 0)
-		{
+		printf("%d", va_arg(params, int));
+		if (separator && i != n - 1)
 			printf("%s", separator);
-		}
-		printf("%d", va_arg(list, int));
 	}
-	putchar(10);
+	printf("\n");
 }
