@@ -8,32 +8,23 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *next, *loopnode;
-	size_t len;
-	int loop = 1;
+	size_t c = 0;
+	listint_t *head, *temp;
+	long diff;
 
-	if (h == NULL || *h == NULL)
+	if (!h)
 		return (0);
-
-	loopnode = find_listint_loop_fl(*h);
-	for (len = 0; (*h != loopnode || loop) && *h != NULL; *h = next)
-	{
-		len++;
-		next = (*h)->next;
-		if (*h == loopnode && loop)
-		{
-			if (loopnode == loopnode->next)
-			{
-				free(*h);
-				break;
-			}
-			len++;
-			next = next->next;
-			free((*h)->next);
-			loop = 0;
-		}
-		free(*h);
-	}
+	head = *h;
 	*h = NULL;
-	return (len);
+	while (head)
+	{
+		c++;
+		diff = head->next - head;
+		temp = head;
+		free(temp);
+		if (diff >= 0)
+			break;
+		head = head->next;
+	}
+	return (c);
 }
