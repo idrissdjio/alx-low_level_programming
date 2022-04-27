@@ -3,8 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_listint_safe - print loop even 
- * with a loop
+ * print_listint_safe - print loop
  * @head: the head of the list
  * Return: the number of nodes printed
  */
