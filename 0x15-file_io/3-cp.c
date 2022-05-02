@@ -27,6 +27,7 @@ void _close(int fd)
 		exit(100);
 	}
 }
+
 /**
  * copy_file - copies a file
  * @src_fd: source file
@@ -58,6 +59,7 @@ void copy_file(ssize_t src_fd, ssize_t target_fd, char *target)
 		count = read(src_fd, buffer, 1024);
 	}
 }
+
 /**
  * main - copies a file to another file
  * @argc: number of arguments (should be 3)
@@ -92,23 +94,3 @@ int main(int argc, char *argv[])
 	_close(target_fd);
 	return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
